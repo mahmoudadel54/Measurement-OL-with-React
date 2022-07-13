@@ -66,7 +66,7 @@ function MapFuncComponent() {
       source: source,
       type: drawType,
       style: function (feature) {
-        return styleFunction(feature, true, drawType, segmentStyles);
+      return styleFunction(feature, true, drawType,segmentStyles, tip, modify);
       },
     });
     draw.on('drawstart', function () {
