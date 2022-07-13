@@ -1,0 +1,16 @@
+#map{
+    height: 90vh;
+    width:100vw;
+    position: relative;
+}
+
+.measure-btns{
+        position: absolute;
+    z-index: 1;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+.measure-btns span{
+    margin: 0.5em;
+}
