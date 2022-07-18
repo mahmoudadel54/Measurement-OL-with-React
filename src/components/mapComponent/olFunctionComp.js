@@ -39,7 +39,7 @@ function MeasureMapCompOl() {
   }, []);
 
   const handleMeasure = (type) => {
-
+    clearMeasure()
     const segmentStyles = [getCustomStyle('segment')];
     const source = new VectorSource();
     setMeasureLayer(source)
@@ -80,7 +80,7 @@ function MeasureMapCompOl() {
       modifyStyle.setGeometry();
       modify.setActive(true);
       map.once('pointermove', function () {
-        let modifyStyle = getCustomStyle('modified')
+        // let modifyStyle = getCustomStyle('modified')
         modifyStyle.setGeometry();
       });
       tip = idleTip;
@@ -90,9 +90,9 @@ function MeasureMapCompOl() {
     setDrawInteraction(draw)
   }
 const clearMeasure =()=>{
-  measureLayer.clear();
-      map.removeInteraction(drawInteraction)
-      map.removeInteraction(modifyInteraction)
+  measureLayer&& measureLayer.clear();
+  drawInteraction&&map.removeInteraction(drawInteraction)
+  modifyInteraction&&map.removeInteraction(modifyInteraction)
 }
   return <><div id="map" >
     <div className="measure-btns">
