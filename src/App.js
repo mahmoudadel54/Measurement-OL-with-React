@@ -1,8 +1,10 @@
 import { Switch, Route } from "react-router";
 import "./App.css";
-import MapComponent from "./components/mapComponent/fumctionComp";
+import MeasureMapCompOl from "./components/mapComponent/olFunctionComp";
+import MeasureMapCompOlExt from "./components/mapComponent/olExtFunctionComp";
 //components
 import NavBar from "./components/navBar/NavBar";
+import Home from "./pages/Home";
 
 
 function App() {
@@ -12,7 +14,9 @@ function App() {
       <NavBar />
       <main style={{ }}>
         <Switch>
-          <Route path="/" component={MapComponent} />
+          <Route exact path="/ol" component={MeasureMapCompOl} />
+          <Route exact path="/olext" component={MeasureMapCompOlExt} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </main>
     </div>

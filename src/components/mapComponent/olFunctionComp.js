@@ -10,7 +10,7 @@ import { Draw, Modify } from 'ol/interaction';
 import { getCustomStyle, styleFunction } from "./helperFunc";
 import "ol/ol.css"
 import './style.css'
-function MapFuncComponent() {
+function MeasureMapCompOl() {
   const [map, setMap] = useState();
   const [measureLayer, setMeasureLayer] = useState();
   const [drawInteraction, setDrawInteraction] = useState();
@@ -106,4 +106,4 @@ const clearMeasure =()=>{
 
 }
 
-export default MapFuncComponent;
+export default MeasureMapCompOl;

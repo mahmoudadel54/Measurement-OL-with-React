@@ -6,8 +6,8 @@ function Home() {
       {/* <h1>Home Page</h1> */}
       <div>
 
-      <Link to={"/MapwithClass"} className="m-2 btn btn-primary">Map with Class Coomponent</Link>
-      <Link to={"/MapwithFunction"} className="m-2 btn btn-danger">Map with Function Coomponent</Link>
+      <Link to={"/ol"} className="m-2 btn btn-primary">Map with Measurement using Pure Ol</Link>
+      <Link to={"/olext"} className="m-2 btn btn-danger">Map with Measurement using Ol EXT</Link>
       </div>
     </div>
   );
